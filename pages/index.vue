@@ -10,6 +10,7 @@
           on
           <u>play.atria.network</u>
         </p>
+        <nuxt-link class="button--basic" to="/top">Let's Play</nuxt-link>
       </div>
     </article>
   </div>
@@ -27,7 +28,6 @@ export default {};
   width: 100%;
   height: calc(100vh - 72px);
   z-index: -1;
-  opacity: 0.9;
 }
 
 .container {
@@ -56,6 +56,7 @@ export default {};
     font-size: $font-l;
     color: $color-white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 16px;
   }
   &_onlines {
     font-size: $font-xl;

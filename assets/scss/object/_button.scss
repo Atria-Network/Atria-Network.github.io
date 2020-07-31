@@ -1,0 +1,11 @@
+.button--basic {
+  display: inline-block;
+  color: $color-white;
+  background-color: rgb(255, 115, 0);
+  font-size: $font-m;
+  padding: 12px 40px;
+  transition: all .3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
