@@ -22,7 +22,11 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/stylesheet', href: 'https://use.typekit.net/tnj1mjr.css' }
+    ],
+    script: [
+      { src: 'https://leonardosnt.github.io/mc-player-counter/dist/mc-player-counter.min.js' }
     ]
   },
   /*
