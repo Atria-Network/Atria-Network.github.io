@@ -1,19 +1,25 @@
 <template>
   <div>
-    <header-component />
-    <Nuxt />
+    <HeaderNavigation />
+    <main class="main">
+      <Nuxt />
+    </main>
   </div>
 </template>
 
 <script>
-import HeaderComponent from "~/layouts/header-component.vue";
+import HeaderNavigation from "~/components/organisms/HeaderNavigation.vue";
 
 export default {
   components: {
-    HeaderComponent,
+    HeaderNavigation,
   },
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+.main {
+  margin-top: 64px;
+  min-height: 80vh;
+}
 </style>
