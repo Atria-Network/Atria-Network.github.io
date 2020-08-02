@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderNavigation />
+    <GlobalHeader />
     <main class="main">
       <Nuxt />
     </main>
@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import HeaderNavigation from "~/components/organisms/HeaderNavigation.vue";
+import GlobalHeader from "~/components/organisms/GlobalHeader.vue";
 
 export default {
   components: {
-    HeaderNavigation,
+    GlobalHeader,
   },
 };
 </script>

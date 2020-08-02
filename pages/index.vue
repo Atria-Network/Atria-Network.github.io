@@ -1,10 +1,9 @@
 <template>
-  <link-button href="https://google.com">aaa</link-button>
+  <link-button to="index">aaa</link-button>
 </template>
 
 <script>
-import LinkButton from "~/components/atoms/button/LinkButton.vue";
-import SmallSinbol from "~/components/molecules/SmallSinbol.vue";
+import LinkButton from "~/components/atoms/button/PrimaryButton.vue";
 
 export default {
   components: {
