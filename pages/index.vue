@@ -1,13 +1,13 @@
 <template>
-  <link-button to="index">aaa</link-button>
+  <TopVisual />
 </template>
 
 <script>
-import LinkButton from "~/components/atoms/button/PrimaryButton.vue";
+import TopVisual from "~/components/organisms/TopVisual.vue";
 
 export default {
   components: {
-    LinkButton,
+    TopVisual,
   },
 };
 </script>
