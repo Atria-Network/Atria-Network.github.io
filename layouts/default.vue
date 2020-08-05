@@ -1,19 +1,32 @@
 <template>
   <div>
-    <header-component />
-    <Nuxt />
+    <GlobalHeader />
+    <main class="main">
+      <Nuxt />
+    </main>
+    <GlobalFooter />
   </div>
 </template>
 
 <script>
-import HeaderComponent from "~/layouts/header-component.vue";
+import GlobalHeader from "~/components/organisms/GlobalHeader.vue";
+import GlobalFooter from "~/components/organisms/GlobalFooter.vue";
 
 export default {
   components: {
-    HeaderComponent,
+    GlobalHeader,
+    GlobalFooter,
   },
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+.main {
+  margin-top: 64px;
+  min-height: 80vh;
+  @include mq(md) {
+    margin-top: 0;
+    min-height: 100vh;
+  }
+}
 </style>
