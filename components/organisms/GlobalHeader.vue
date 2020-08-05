@@ -3,16 +3,16 @@
     <small-sinbol />
     <ul class="header-navigation_links">
       <li class="header-navigation_links_item">
-        <nuxt-link to="howto">How to play</nuxt-link>
+        <nuxt-link to="/">Top</nuxt-link>
       </li>
       <li class="header-navigation_links_item">
-        <nuxt-link to="howto">Ranking</nuxt-link>
+        <nuxt-link to="comsoon">Ranking</nuxt-link>
       </li>
       <li class="header-navigation_links_item">
-        <nuxt-link to="howto">Status</nuxt-link>
+        <nuxt-link to="comsoon">Status</nuxt-link>
       </li>
       <li class="header-navigation_links_item">
-        <nuxt-link to="howto">Announce</nuxt-link>
+        <nuxt-link to="comsoon">Announce</nuxt-link>
       </li>
     </ul>
   </header>
@@ -30,7 +30,7 @@ export default {};
 
   position: fixed;
   top: 0;
-  left: 0;
+  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -40,18 +40,34 @@ export default {};
   background-color: $color-back;
 
   @include mq(md) {
-    padding: 0 8px;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    display: block;
+    padding: 6px 12px;
   }
 
   &_links {
     display: flex;
     justify-content: center;
+    @include mq(md) {
+      flex-wrap: wrap;
+    }
     &_item {
       padding: 0 20px;
+      @include mq(md) {
+        width: 100%;
+      }
       & > a {
         color: $color-white;
         letter-spacing: 2px;
         font-size: $font-s;
+        @include mq(md) {
+          font-size: $font-m;
+        }
       }
     }
   }
