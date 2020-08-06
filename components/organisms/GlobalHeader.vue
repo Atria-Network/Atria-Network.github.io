@@ -1,7 +1,7 @@
 <template>
   <header class="header-navigation">
     <small-sinbol />
-    <input type="checkbox" class="header-navigation_check" id="toggler" />
+    <input type="checkbox" class="header-navigation_check" id="toggler" v-model="toggle" />
     <label class="header-navigation_toggle" for="toggler">
       <font-awesome-icon :icon="['fa', 'bars']" />
     </label>
@@ -11,16 +11,16 @@
       </label>
       <ul class="header-navigation_links">
         <li class="header-navigation_links_item">
-          <nuxt-link to="/">Top</nuxt-link>
+          <nuxt-link @click.native="toggleNavigate" to="/">Top</nuxt-link>
         </li>
         <li class="header-navigation_links_item">
-          <nuxt-link to="comsoon">Ranking</nuxt-link>
+          <nuxt-link @click.native="toggleNavigate" to="comsoon">Ranking</nuxt-link>
         </li>
         <li class="header-navigation_links_item">
-          <nuxt-link to="comsoon">Status</nuxt-link>
+          <nuxt-link @click.native="toggleNavigate" to="comsoon">Status</nuxt-link>
         </li>
         <li class="header-navigation_links_item">
-          <nuxt-link to="comsoon">Announce</nuxt-link>
+          <nuxt-link @click.native="toggleNavigate" to="comsoon">Announce</nuxt-link>
         </li>
       </ul>
     </div>
@@ -93,9 +93,9 @@ export default {
       right: 0;
       transform: translateX(100%);
       height: 100vh;
-      width: 100%;
+      width: 200px;
       padding: 64px 32px;
-      transition: all 0.3s;
+      transition: all 0.35s;
     }
   }
   &_links {
