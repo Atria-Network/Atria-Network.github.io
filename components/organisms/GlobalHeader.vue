@@ -1,26 +1,46 @@
 <template>
   <header class="header-navigation">
     <small-sinbol />
-    <ul class="header-navigation_links">
-      <li class="header-navigation_links_item">
-        <nuxt-link to="/">Top</nuxt-link>
-      </li>
-      <li class="header-navigation_links_item">
-        <nuxt-link to="comsoon">Ranking</nuxt-link>
-      </li>
-      <li class="header-navigation_links_item">
-        <nuxt-link to="comsoon">Status</nuxt-link>
-      </li>
-      <li class="header-navigation_links_item">
-        <nuxt-link to="comsoon">Announce</nuxt-link>
-      </li>
-    </ul>
+    <input type="checkbox" class="header-navigation_check" id="toggler" />
+    <label class="header-navigation_toggle" for="toggler">
+      <font-awesome-icon :icon="['fa', 'bars']" />
+    </label>
+    <div class="header-navigation_wrap">
+      <label class="header-navigation_toggle" for="toggler">
+        <font-awesome-icon :icon="['fa', 'times']" />
+      </label>
+      <ul class="header-navigation_link">
+        <li class="header-navigation_links_item">
+          <nuxt-link to="/">Top</nuxt-link>
+        </li>
+        <li class="header-navigation_links_item">
+          <nuxt-link to="comsoon">Ranking</nuxt-link>
+        </li>
+        <li class="header-navigation_links_item">
+          <nuxt-link to="comsoon">Status</nuxt-link>
+        </li>
+        <li class="header-navigation_links_item">
+          <nuxt-link to="comsoon">Announce</nuxt-link>
+        </li>
+      </ul>
+    </div>
   </header>
 </template>
 
 <script>
 import SmallSinbol from "~/components/molecules/sinbol/SmallSinbol.vue";
-export default {};
+export default {
+  data: function () {
+    return {
+      toggle: false,
+    };
+  },
+  methods: {
+    toggleNavigate() {
+      this.toggle = !this.toggle;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -41,15 +61,39 @@ export default {};
 
   @include mq(md) {
     width: 100%;
-    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0 12px;
+  }
+  &_check {
+    display: none;
+  }
+  &_toggle {
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    color: $color-white;
+    font-size: $font-xl;
+    position: absolute;
     top: 0;
     right: 0;
-    z-index: 1;
-
-    display: block;
-    padding: 6px 12px;
   }
-
+  &_wrap {
+    background-color: $color-back;
+    @include mq(md) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      height: 100vh;
+      width: 100%;
+      padding: 64px 32px;
+      transition: all 0.3s;
+    }
+  }
   &_links {
     display: flex;
     justify-content: center;
@@ -58,8 +102,11 @@ export default {};
     }
     &_item {
       padding: 0 20px;
+
       @include mq(md) {
         width: 100%;
+        padding: 20px;
+        text-align: right;
       }
       & > a {
         color: $color-white;
@@ -71,5 +118,9 @@ export default {};
       }
     }
   }
+}
+
+#toggler:checked ~ .header-navigation_wrap {
+  transform: translateX(0);
 }
 </style>
