@@ -49,7 +49,7 @@
     }
     &_clip {
       position: absolute;
-      bottom: 15px;
+      bottom: 20px;
       left: 50%;
       display: inline-block;
       padding: 6px 20px;
