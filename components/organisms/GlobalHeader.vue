@@ -9,7 +9,7 @@
       <label class="header-navigation_toggle" for="toggler">
         <font-awesome-icon :icon="['fa', 'times']" />
       </label>
-      <ul class="header-navigation_link">
+      <ul class="header-navigation_links">
         <li class="header-navigation_links_item">
           <nuxt-link to="/">Top</nuxt-link>
         </li>
@@ -79,11 +79,15 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
+    display: none;
+
+    @include mq(md) {
+      display: block;
+    }
   }
   &_wrap {
     background-color: $color-back;
     @include mq(md) {
-      display: block;
       position: absolute;
       top: 0;
       right: 0;
@@ -95,8 +99,9 @@ export default {
     }
   }
   &_links {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
+    flex-wrap: nowrap;
     @include mq(md) {
       flex-wrap: wrap;
     }
