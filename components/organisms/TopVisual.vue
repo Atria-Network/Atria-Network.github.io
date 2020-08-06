@@ -1,7 +1,7 @@
 <style lang="scss" scoped>
 .top-visual {
   width: 100%;
-  height: calc(85vh - 64px);
+  height: calc(100vh - 64px);
   position: relative;
   &_background {
     position: absolute;
