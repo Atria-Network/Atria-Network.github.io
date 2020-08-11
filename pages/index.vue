@@ -1,11 +1,13 @@
 <template>
   <div class="main_wrap">
     <TopVisual />
-    <div class="content color-back">
+    <div class="content theme-black">
       <section class="content_wrap">
         <h1>Comming Soon...</h1>
+        <p></p>
       </section>
     </div>
+    <div class="content theme-orange"></div>
   </div>
 </template>
 
@@ -18,4 +20,3 @@ export default {
   },
 };
 </script>
-

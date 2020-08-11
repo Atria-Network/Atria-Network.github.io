@@ -22,6 +22,9 @@
         <li class="header-navigation_links_item">
           <nuxt-link @click.native="toggleNavigate" to="comsoon">Announce</nuxt-link>
         </li>
+        <li class="header-navigation_links_item">
+          <a @click.native="toggleNavigate" href="http://store.atria.network/">SHOP</a>
+        </li>
       </ul>
     </div>
   </header>

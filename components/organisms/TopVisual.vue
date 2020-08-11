@@ -67,8 +67,6 @@
 }
 </style>
 
-
-
 <template>
   <div class="top-visual">
     <img class="top-visual_background" src="/img/background.jpg" />
@@ -87,7 +85,7 @@
           <span class="top-visual_status_clip" v-if="copied">Copied IP!</span>
         </transition>
       </div>
-      <PrimaryButton to="howto">Let't Play</PrimaryButton>
+      <PrimaryButton to="/">Let't Play</PrimaryButton>
     </div>
   </div>
 </template>
