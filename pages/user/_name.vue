@@ -1,3 +1,21 @@
+<style lang="scss" scoped>
+.user {
+  &_head {
+    display: inline-flex;
+    &_skin {
+    }
+    &_name {
+    }
+  }
+}
+</style>
+
 <template>
-  <h1>{{ $route.params.name }}</h1>
+  <div class="main_wrap">
+    <PageVisual>User Status</PageVisual>
+  </div>
 </template>
+
+<script>
+export default {};
+</script>

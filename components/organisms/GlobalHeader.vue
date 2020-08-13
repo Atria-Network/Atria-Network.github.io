@@ -23,7 +23,7 @@
           <nuxt-link @click.native="toggleNavigate" to="comsoon">Announce</nuxt-link>
         </li>
         <li class="header-navigation_links_item">
-          <a @click.native="toggleNavigate" href="http://store.atria.network/">Donate</a>
+          <a @click="toggleNavigate" href="http://store.atria.network/">Donate</a>
         </li>
       </ul>
     </div>
@@ -96,7 +96,7 @@ export default {
       right: 0;
       transform: translateX(100%);
       height: 100vh;
-      width: 200px;
+      width: 100%;
       padding: 64px 32px;
       transition: all 0.35s;
     }

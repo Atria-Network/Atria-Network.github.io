@@ -30,7 +30,9 @@
   <div class="main_wrap">
     <div class="page-visual">
       <img class="page-visual_background" src="/img/background.jpg" />
-      <h1 class="page-visual_title">Comming Soon...</h1>
+      <h1 class="page-visual_title">
+        <slot />
+      </h1>
     </div>
   </div>
 </template>

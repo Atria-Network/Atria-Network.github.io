@@ -3,7 +3,7 @@
 
 <template>
   <div class="main_wrap">
-    <PageVisual />
+    <PageVisual>Comming soon...</PageVisual>
   </div>
 </template>
 

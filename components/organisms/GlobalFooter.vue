@@ -8,6 +8,9 @@
   &_wrap {
     max-width: 840px;
     margin: 0 auto;
+    @include mq(md) {
+      width: 80%;
+    }
   }
   &_navigate {
     padding: 60px 0;
@@ -17,6 +20,9 @@
 
     &_item {
       padding: 0 20px;
+      @include mq(md) {
+        padding-bottom: 20px;
+      }
     }
   }
 
@@ -33,20 +39,20 @@
     <div class="global-footer_wrap">
       <SmallSinbol />
       <ul class="global-footer_navigate">
-        <li>
-          <nuxt-link to="/">TOP</nuxt-link>
+        <li class="global-footer_navigate_item">
+          <nuxt-link to="/">Top</nuxt-link>
         </li>
-        <li>
-          <nuxt-link to="/">TOP</nuxt-link>
+        <li class="global-footer_navigate_item">
+          <nuxt-link to="comsoon">Ranking</nuxt-link>
         </li>
-        <li>
-          <nuxt-link to="/">TOP</nuxt-link>
+        <li class="global-footer_navigate_item">
+          <nuxt-link to="comsoon">Status</nuxt-link>
         </li>
-        <li>
-          <nuxt-link to="/">TOP</nuxt-link>
+        <li class="global-footer_navigate_item">
+          <nuxt-link to="comsoon">Announce</nuxt-link>
         </li>
-        <li>
-          <nuxt-link to="/">TOP</nuxt-link>
+        <li class="global-footer_navigate_item">
+          <a href="http://store.atria.network/">Donate</a>
         </li>
       </ul>
       <span class="global-footer_copyright">Copyright 2020 Atria Network.</span>
