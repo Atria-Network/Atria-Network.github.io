@@ -6,6 +6,7 @@
     margin: 0px auto;
     @include mq(md) {
       width: 100%;
+      padding: 0 20px;
     }
   }
 }
