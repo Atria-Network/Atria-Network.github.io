@@ -3,7 +3,7 @@
     <TopVisual />
     <div class="content theme-black">
       <section class="content_wrap">
-        <h1>Coming Soon...</h1>
+        <h1>OLD HOST</h1>
         <p></p>
       </section>
     </div>
