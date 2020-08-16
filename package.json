@@ -2,6 +2,7 @@
   "name": "atria-network",
   "version": "1.0.0",
   "private": true,
+  "description": "Atria Network | Minecraft Team PvP Server | Region Asia",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
