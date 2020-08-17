@@ -3,9 +3,10 @@
   &_head {
     display: inline-flex;
     align-items: center;
+    padding-bottom: 60px;
     &_skin {
-      width: 72px;
-      height: 72px;
+      width: 64px;
+      height: 64px;
       background-color: black;
       & > img {
         width: 100%;
@@ -21,7 +22,24 @@
   &_status {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px 20px;
     &_item {
+      border-bottom: 2px solid $color-gray;
+      &_head {
+        font-size: $font-l;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        color: $color-black;
+      }
+      &_content {
+        font-size: $font-xl;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 40px 0;
+      }
     }
   }
 }
@@ -40,7 +58,36 @@
             <div class="user_head_name">{{ status.user.name }}</div>
           </div>
           <ul class="user_status">
-            <li class="user_status_item"></li>
+            <li class="user_status_item">
+              <h2 class="user_status_item_head">Kill/Death Ratio</h2>
+              <span
+                class="user_status_item_content"
+              >{{ Math.round((status.user.kills / status.user.deaths) * 1000 ) / 1000 }}</span>
+            </li>
+            <li class="user_status_item">
+              <h2 class="user_status_item_head">Death Count</h2>
+              <span class="user_status_item_content">{{ status.user.deaths }}</span>
+            </li>
+            <li class="user_status_item">
+              <h2 class="user_status_item_head">Kill Count</h2>
+              <span class="user_status_item_content">{{ status.user.kills }}</span>
+            </li>
+            <li class="user_status_item">
+              <h2 class="user_status_item_head">WOOL</h2>
+              <span class="user_status_item_content">{{ status.user.wools }}</span>
+            </li>
+            <li class="user_status_item">
+              <h2 class="user_status_item_head">CORES</h2>
+              <span class="user_status_item_content">{{ status.user.cores }}</span>
+            </li>
+            <li class="user_status_item">
+              <h2 class="user_status_item_head">MONUMENT</h2>
+              <span class="user_status_item_content">{{ status.user.monuments }}</span>
+            </li>
+            <li class="user_status_item">
+              <h2 class="user_status_item_head">FLAG</h2>
+              <span class="user_status_item_content">{{ status.user.flags }}</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -51,9 +98,10 @@
 <script>
 export default {
   async asyncData({ $axios, params }) {
-    const url = "http://localhost:3001/api/v1/user?name=" + params.name;
+    const url = "http://127.0.0.1:3001/api/v1/user?name=" + params.name;
     const status = await $axios.$get(url);
-    const skin_url = "https://crafatar.com/avatars/" + status.user.uuid;
+    const skin_url =
+      "http://cravatar.eu/avatar/" + status.user.uuid + "/64.png";
     return {
       status,
       skin_url,
