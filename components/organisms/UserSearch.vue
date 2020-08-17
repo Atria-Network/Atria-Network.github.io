@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     async search() {
-      this.$router.push({ name: "user-name", params: { name: this.username } });
+      window.location.href = "https://atria.network/user/" + this.username;
     },
   },
 };
