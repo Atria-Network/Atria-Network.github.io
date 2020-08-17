@@ -22,6 +22,9 @@
   &_status {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    @include mq(md) {
+      grid-template-columns: 1fr;
+    }
     gap: 80px 20px;
     &_item {
       border-bottom: 2px solid $color-gray;
