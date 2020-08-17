@@ -28,6 +28,7 @@
       class="user-search_input"
       v-model="username"
       placeholder="search for username"
+      required
     />
     <input type="submit" class="user-search_submit" value="Search" />
   </form>

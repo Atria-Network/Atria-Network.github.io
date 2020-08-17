@@ -66,13 +66,14 @@
               >{{ Math.round((status.user.kills / status.user.deaths) * 1000 ) / 1000 }}</span>
             </li>
             <li class="user_status_item">
-              <h2 class="user_status_item_head">Death Count</h2>
-              <span class="user_status_item_content">{{ status.user.deaths }}</span>
-            </li>
-            <li class="user_status_item">
               <h2 class="user_status_item_head">Kill Count</h2>
               <span class="user_status_item_content">{{ status.user.kills }}</span>
             </li>
+            <li class="user_status_item">
+              <h2 class="user_status_item_head">Death Count</h2>
+              <span class="user_status_item_content">{{ status.user.deaths }}</span>
+            </li>
+
             <li class="user_status_item">
               <h2 class="user_status_item_head">WOOL</h2>
               <span class="user_status_item_content">{{ status.user.wools }}</span>
@@ -105,6 +106,7 @@ export default {
   components: {
     UserSearch,
   },
+  mounted() {},
   async asyncData({ $axios, params }) {
     const url = "http://127.0.0.1:3001/api/v1/user?name=" + params.name;
     const status = await $axios.$get(url);
