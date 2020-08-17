@@ -14,13 +14,14 @@
           <nuxt-link @click.native="toggleNavigate" to="/">Top</nuxt-link>
         </li>
         <li class="header-navigation_links_item">
-          <nuxt-link @click.native="toggleNavigate" to="comsoon">Ranking</nuxt-link>
+          <nuxt-link @click.native="toggleNavigate" to="/user">Status</nuxt-link>
         </li>
         <li class="header-navigation_links_item">
-          <nuxt-link @click.native="toggleNavigate" to="comsoon">Status</nuxt-link>
+          <nuxt-link @click.native="toggleNavigate" to="/comsoon">Ranking</nuxt-link>
         </li>
+
         <li class="header-navigation_links_item">
-          <nuxt-link @click.native="toggleNavigate" to="comsoon">Announce</nuxt-link>
+          <nuxt-link @click.native="toggleNavigate" to="/comsoon">Announce</nuxt-link>
         </li>
         <li class="header-navigation_links_item">
           <a @click="toggleNavigate" href="http://store.atria.network/">Donate</a>

@@ -50,7 +50,8 @@
     <PageVisual>User Status</PageVisual>
     <article class="content">
       <div class="content_wrap">
-        <div class="user">
+        <user-search />
+        <div class="user" v-if="status.code">
           <div class="user_head">
             <div class="user_head_skin">
               <img v-bind:src="skin_url" />
@@ -90,22 +91,36 @@
             </li>
           </ul>
         </div>
+        <section v-else>
+          <h2>{{ params.name }} Not Found.</h2>
+        </section>
       </div>
     </article>
   </div>
 </template>
 
 <script>
+import UserSearch from "~/components/organisms/UserSearch.vue";
 export default {
+  components: {
+    UserSearch,
+  },
   async asyncData({ $axios, params }) {
     const url = "http://127.0.0.1:3001/api/v1/user?name=" + params.name;
     const status = await $axios.$get(url);
-    const skin_url =
-      "http://cravatar.eu/avatar/" + status.user.uuid + "/64.png";
-    return {
-      status,
-      skin_url,
-    };
+    if (status.code == true) {
+      const skin_url =
+        "http://cravatar.eu/avatar/" + status.user.uuid + "/64.png";
+      return {
+        status,
+        skin_url,
+      };
+    } else {
+      return {
+        status,
+        params,
+      };
+    }
   },
 };
 </script>
