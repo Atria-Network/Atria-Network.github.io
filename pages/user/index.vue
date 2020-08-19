@@ -3,7 +3,7 @@
 
 <template>
   <div class="main_wrap">
-    <PageVisual>Status Search</PageVisual>
+    <PageVisual>Stats Search</PageVisual>
     <article class="content">
       <div class="content_wrap">
         <user-search />

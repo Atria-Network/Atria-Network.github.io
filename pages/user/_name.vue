@@ -50,7 +50,7 @@
 
 <template>
   <div class="main_wrap">
-    <PageVisual>User Status</PageVisual>
+    <PageVisual>User Stats</PageVisual>
     <article class="content">
       <div class="content_wrap">
         <user-search />
