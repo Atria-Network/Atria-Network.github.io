@@ -5,9 +5,8 @@
     align-items: center;
     padding-bottom: 60px;
     &_skin {
-      width: 64px;
-      height: 64px;
-      background-color: black;
+      width: 96px;
+      height: 96px;
       & > img {
         width: 100%;
         height: 100%;
