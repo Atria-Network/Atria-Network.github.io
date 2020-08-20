@@ -115,7 +115,7 @@ export default {
     const status = await $axios.$get(url);
     if (status.code == true) {
       const skin_url =
-        "https://cravatar.eu/avatar/" + status.user.uuid + "/64.png";
+        "https://cravatar.eu/helmhead/" + status.user.uuid + "/128.png";
       return {
         status,
         skin_url,
