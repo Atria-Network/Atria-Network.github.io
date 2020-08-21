@@ -65,7 +65,7 @@
               <h2 class="user_status_item_head">Kill/Death Ratio</h2>
               <span
                 class="user_status_item_content"
-              >{{ Math.round((status.user.kills / status.user.deaths) * 1000 ) / 1000 }}</span>
+              >{{ (status.user.kills > 0) ? Math.round((status.user.kills / status.user.deaths) * 1000 ) / 1000 : "0" }}</span>
             </li>
             <li class="user_status_item">
               <h2 class="user_status_item_head">Kill Count</h2>
