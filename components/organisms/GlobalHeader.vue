@@ -14,12 +14,14 @@
           <nuxt-link @click.native="toggleNavigate" to="/">Top</nuxt-link>
         </li>
         <li class="header-navigation_links_item">
+          <nuxt-link @click.native="toggleNavigate" to="/guide">Guide</nuxt-link>
+        </li>
+        <li class="header-navigation_links_item">
           <nuxt-link @click.native="toggleNavigate" to="/user">User Stats</nuxt-link>
         </li>
         <li class="header-navigation_links_item">
           <nuxt-link @click.native="toggleNavigate" to="/comsoon">Ranking</nuxt-link>
         </li>
-
         <li class="header-navigation_links_item">
           <nuxt-link @click.native="toggleNavigate" to="/comsoon">Announce</nuxt-link>
         </li>

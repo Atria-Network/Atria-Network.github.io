@@ -43,10 +43,13 @@
           <nuxt-link to="/">Top</nuxt-link>
         </li>
         <li class="global-footer_navigate_item">
-          <nuxt-link to="comsoon">Ranking</nuxt-link>
+          <nuxt-link to="/">Guide</nuxt-link>
         </li>
         <li class="global-footer_navigate_item">
           <nuxt-link to="comsoon">User Stats</nuxt-link>
+        </li>
+        <li class="global-footer_navigate_item">
+          <nuxt-link to="comsoon">Ranking</nuxt-link>
         </li>
         <li class="global-footer_navigate_item">
           <nuxt-link to="comsoon">Announce</nuxt-link>
