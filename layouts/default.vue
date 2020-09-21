@@ -25,7 +25,7 @@ export default {
   margin-top: 64px;
   min-height: 80vh;
   @include mq(md) {
-    margin-top: 0;
+    margin-top: 64px;
     min-height: 100vh;
   }
 }

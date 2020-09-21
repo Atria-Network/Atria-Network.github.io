@@ -13,5 +13,8 @@ export default {};
   letter-spacing: 1.25px;
   display: inline-flex;
   align-items: center;
+  @include mq(md) {
+    font-size: 20px;
+  }
 }
 </style>
