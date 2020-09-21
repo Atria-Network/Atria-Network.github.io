@@ -60,6 +60,9 @@
         font-size: 20px;
         display: flex;
         align-items: center;
+        &:hover {
+          background-color: #00000052;
+        }
         &_no {
           width: 70px;
           height: 50px;
@@ -85,6 +88,7 @@
           font-weight: bold;
           padding: 0 20px;
           position: relative;
+          letter-spacing: 0.1em;
         }
         &_sub {
           display: block;
@@ -143,21 +147,21 @@
         <div class="guide_index_background">
           <img src="/img/background.jpg" />
         </div>
-        <h1 class="guide_index_title">Guide Index</h1>
+        <h1 class="guide_index_title">Game Guide Index</h1>
         <ul class="guide_index_nav">
           <li class="guide_index_nav_item">
             <span class="guide_index_nav_item_no">1.</span>
-            <a class="guide_index_nav_item_link" href>
+            <button class="guide_index_nav_item_link" v->
               CP
               <span class="guide_index_nav_item_sub">Capture The Wool</span>
-            </a>
+            </button>
           </li>
           <li class="guide_index_nav_item">
             <span class="guide_index_nav_item_no">2.</span>
-            <a class="guide_index_nav_item_link" href>
+            <button class="guide_index_nav_item_link" href>
               DTC/M
               <span class="guide_index_nav_item_sub">Destroy The Core/Monument</span>
-            </a>
+            </button>
           </li>
           <li class="guide_index_nav_item">
             <span class="guide_index_nav_item_no">3.</span>
@@ -182,7 +186,7 @@
           </li>
         </ul>
       </article>
-      <article class="guide_page">
+      <article class="guide_page" id="game-cp">
         <div class="guide_page_background">
           <img src="/img/CP.png" />
         </div>
@@ -195,5 +199,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      pagenumber: 0,
+    };
+  },
+  methods() {
+    function scrollTo(event) {
+      event;
+    }
+  },
+};
 </script>
